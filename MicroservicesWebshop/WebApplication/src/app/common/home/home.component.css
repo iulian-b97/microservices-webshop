@@ -1,0 +1,95 @@
+/*Container*/
+.container {
+    background-image: linear-gradient(rgba(6, 105, 21, 0.25),rgba(3, 77, 14, 0.25)), 
+                      url('src/assets/images/shop01.jpg');
+    width: 100%;
+    min-height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card-1 {
+    width: 30%;
+    min-height: 200px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+.card-1 > h1 {
+    font-size: 30px;
+    margin-block-end: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+    .card-1 > h1 {
+        font-size: 25px;
+    }
+
+    .card-1 > span {
+        font-size: 12px;
+    }
+  }
+
+  /*Container-2*/
+  .container-2 {
+    width: 95%;
+    min-height: 300px;
+    margin: auto;
+    display: flex;
+  }
+
+  .slide {
+    width: 22%;
+    height: 300px;
+    background-color: #04aa6dab;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 15px;
+    text-decoration: none;
+  }
+
+  .slide:hover {
+    box-shadow: none;
+    background-color: #04aa6d;
+  }
+
+  .slide h1 {
+    color: white;
+    font-weight: 500;
+  }
+
+  .slide span {
+    color: white;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 799px) {
+        .container-2{
+        flex-wrap: wrap;
+        }
+
+        .slide {
+        margin-top: 20px;
+        width:80%;
+        height: 300px;
+        }
+    }
+
+  @media screen and (min-width: 800px) and (max-width: 1500px) {
+      .container-2{
+        flex-wrap: wrap;
+      }
+
+      .slide {
+        margin-top: 20px;
+        width:40%;
+        height: 300px;
+      }
+  }

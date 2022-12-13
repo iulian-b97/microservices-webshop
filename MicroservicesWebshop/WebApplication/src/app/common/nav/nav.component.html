@@ -1,0 +1,14 @@
+<ul class="topnav">
+    <li><a routerLink="/home" [ngClass]="{'active': active == 0 }" (click)="isHome()">Home</a></li>
+    <li><a routerLink="/products" [ngClass]="{'active': active == 1 }" (click)="isProduct()">Products</a></li>
+    <li><a routerLink="/inventory" [ngClass]="{'active': active == 2 }" (click)="isInventory()">Inventory</a></li>
+    <li><a routerLink="/orders" [ngClass]="{'active': active == 3 }" (click)="isOrders()">Orders</a></li>
+    <li><a routerLink="/discount" [ngClass]="{'active': active == 4 }" (click)="isDiscount()">Discount</a></li>
+    <li class="right"><a routerLink="/user/login" [ngClass]="{'active': active == 5 }" (click)="isAuthentication()">Login</a></li>
+    <li class="search-container">
+        <form>
+          <input type="text" placeholder="Search product..." name="search">
+          <button type="submit">Search</button>
+        </form>
+    </li>
+</ul>
