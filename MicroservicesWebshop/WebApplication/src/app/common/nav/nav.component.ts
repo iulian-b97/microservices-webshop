@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthenticationService } from 'src/app/_customer/authentication/authentication.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,14 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthenticationService,
+              private router: Router) { }
 
   active: number = 0
 
     ngOnInit(): void {
         this.active = + localStorage.getItem('active');
     }
-      
+        
     isHome() {
         this.active = 0
         localStorage.setItem('active', '0');
@@ -41,7 +45,16 @@ export class NavComponent implements OnInit {
     }
 
     isAuthentication() {
-      this.active = 5
-      localStorage.setItem('active', '5');
-  }
+        this.active = 5
+        localStorage.setItem('active', '5');
+    } 
+
+    logout() {
+        this.authService.logout();
+        return this.router.navigate(['/home'])
+    }
+
+    isLogged(): boolean {
+        return this.authService.isLogged()
+    }
 }

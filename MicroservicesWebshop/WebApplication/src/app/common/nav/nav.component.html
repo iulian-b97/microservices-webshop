@@ -4,7 +4,8 @@
     <li><a routerLink="/inventory" [ngClass]="{'active': active == 2 }" (click)="isInventory()">Inventory</a></li>
     <li><a routerLink="/orders" [ngClass]="{'active': active == 3 }" (click)="isOrders()">Orders</a></li>
     <li><a routerLink="/discount" [ngClass]="{'active': active == 4 }" (click)="isDiscount()">Discount</a></li>
-    <li class="right"><a routerLink="/user/login" [ngClass]="{'active': active == 5 }" (click)="isAuthentication()">Login</a></li>
+    <li *ngIf="!isLogged()" class="right"><a routerLink="/user/login" [ngClass]="{'active': active == 5 }" (click)="isAuthentication()">Login</a></li>
+    <li *ngIf="isLogged()" class="right"><a (click)="logout()">Logout</a></li>
     <li class="search-container">
         <form>
           <input type="text" placeholder="Search product..." name="search">

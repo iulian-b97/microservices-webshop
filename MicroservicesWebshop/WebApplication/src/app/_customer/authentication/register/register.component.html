@@ -2,25 +2,25 @@
     <div class="imgcontainer">
       <img src="assets\images\img_avatar2.png" alt="Avatar" class="avatar">
     </div>
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+    <form [formGroup]="registerForm" autocomplete="off" (submit)="register()">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" formControlName="Username" placeholder="Enter Username" required>
 
-      <label for="uname"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="uname"><b>Email</b></label>
+        <input type="text" formControlName="Email" placeholder="Enter Email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" formControlName="Password" placeholder="Enter Password" required>
 
-      <label for="psw"><b>Confirm Password</b></label>
-      <input type="password" placeholder="Enter Confirm Password" name="psw" required>
-  
-      <button type="submit">Register</button>
-    </div>
-  
+        <label for="psw"><b>Confirm Password</b></label>
+        <input type="password" formControlName="ConfirmPassword" placeholder="Enter Confirm Password" required>
+    
+        <button>Register</button>
+      </div>
+    </form>
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" class="cancelbtn">Cancel</button>
       <span class="psw"><a routerLink="/user/login">Login</a></span>
-    </div>
+    </div> 
 </div>
