@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+}
+
+.left-menu {
+    width: 17%;
+    height: auto;
+    background-color: #99cbc0;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+.products-container {
+    width: 80%;
+}
+
+.products-header {
+    width: 97%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.filter-list {
+    display: flex;
+    padding: 15px 0;
+}
+
+.filter-row label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.filter-row select {
+    padding: 5px;
+    margin-right: 50px;
+}
+
+.products-list {
+    width: 97%;
+    height: auto;
+    margin: auto;
+}
+
+.product-item {
+    display: flex;
+    margin: 20px 0;
+    height: 260px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    box-shadow: none;
+}
+
+.product-image {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-color: rgba(105, 105, 105, 0.664);
+}
+
+.product-details {
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 240px;
+}
+
+.product-details ul li {
+    padding: 5px;
+}
+
+.right-details h2 {
+    color: rgba(255, 25, 25, 0.808);
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-form select {
+    text-align: center;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add-item-form button {
+    padding: 10px;
+    background-color: #99cbc0;
+    border: none;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-item-form button:hover {
+    box-shadow: none;
+}

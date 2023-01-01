@@ -1,0 +1,32 @@
+.category-container {
+    width: 90%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.category-container h1 {
+    color: #333;
+    text-align: center;
+}
+
+.category-container ul {
+    margin-left: -30px;
+}
+
+.category-container ul li {
+    list-style: none;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.category-container ul li a {
+    color: rgb(67, 66, 66);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.category-container ul li a:hover {
+    color: white;
+}

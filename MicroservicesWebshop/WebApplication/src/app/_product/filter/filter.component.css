@@ -1,0 +1,59 @@
+.filter-container {
+    width: 90%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.filter-container h1 {
+    color: #333;
+    text-align: center;
+}
+
+.filter-container ul {
+    margin-left: -30px;
+}
+
+.filter-container ul li {
+    list-style: none;
+    padding: 5px 0px;
+}
+
+.filter-container ul li label {
+    color: rgb(67, 66, 66);
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+.filter-row {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.brand-row {
+    padding: 5px 0;
+}
+
+.brand-row span {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;  
+}
+
+.brand-row span:hover {
+    color: white;
+}
+
+.price-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.price-row input {
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+}
