@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    align-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.products-list {
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+.product-item {
+    display: flex;
+    margin: 20px 0;
+    height: 260px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    box-shadow: none;
+}
+
+.product-image {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-color: rgba(105, 105, 105, 0.664);
+}
+
+.product-details {
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 240px;
+}
+
+.product-details ul li {
+    padding: 5px;
+}
+
+.right-details, .left-details {
+    padding: 0 10px;
+}
+
+.right-details h2 {
+    color: rgba(255, 25, 25, 0.808);
+}
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-item-form select {
+    text-align: center;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add-item-form button {
+    padding: 10px;
+    background-color: #99cbc0;
+    border: none;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background-color: rgb(255, 61, 61) !important;
+    margin: 10px 0;
+}
+
+.add-item-form button:hover {
+    box-shadow: none;
+}
+
+.summary-box {
+    width: 25%;
+    margin: 20px 0;
+}
+
+.summary-card {
+    width: 90%;
+    margin: auto;
+    background-color: #99cbc0;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.summary-card h2 {
+    margin: 0;
+    color: white;
+}
+
+.prices-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.prices-box label {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.send-btn {
+    width: 60%;
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: white;
+}
+
+.discount-input {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 3px;
+}
