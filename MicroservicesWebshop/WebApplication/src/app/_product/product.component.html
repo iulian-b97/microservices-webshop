@@ -6,7 +6,7 @@
     </div>
     <div class="products-container">
         <div class="products-header">
-            <h1>Category 1 <i>(10 results)</i></h1>
+            <h1>{{selectCategoryName}} <i>({{productsCategoryList.length}} results)</i></h1>
             <hr>
             <div class="filter-list">
                 <div class="filter-row">
@@ -27,25 +27,24 @@
                 </div>
             </div>
         </div>
-        <div class="products-list">
-            <div class="product-item">
+        <div class="products-list" *ngIf="productsCategoryList">
+            <div class="product-item" *ngFor="let product of productsCategoryList;">
                 <div class="product-image">
 
                 </div>
                 <div class="product-details">
                     <div class="left-details">
-                        <h3>Title product and something base specifications</h3>
+                        <h3>{{product.name}}</h3>
                         <ul>
-                            <li>Specification 1: </li>
-                            <li>Specification 2: </li>
-                            <li>Specification 3: </li>
-                            <li>Specification 4: </li>
-                            <li>Specification 5: </li>
-                            <li>Specification ...: </li>
+                            <li><b>Mark:</b> {{product.technicalSpecifications.mark}}</li>
+                            <li><b>Length:</b> {{product.technicalSpecifications.length}} cm</li>
+                            <li><b>Height:</b> {{product.technicalSpecifications.height}} cm</li>
+                            <li><b>Width:</b> {{product.technicalSpecifications.width}} cm</li>
+                            <li><b>Weight:</b> {{product.technicalSpecifications.weight}} gr</li>
                         </ul>
                     </div>
                     <div class="right-details">
-                        <h2>10 USD</h2>
+                        <h2>{{product.price}} USD</h2>
                         <div class="add-item-form">
                             <select>
                                 <option value="">1</option>
@@ -58,69 +57,7 @@
                     </div>                 
                 </div>
             </div>
-
-            <div class="product-item">
-                <div class="product-image">
-
-                </div>
-                <div class="product-details">
-                    <div class="left-details">
-                        <h3>Title product and something base specifications</h3>
-                        <ul>
-                            <li>Specification 1: </li>
-                            <li>Specification 2: </li>
-                            <li>Specification 3: </li>
-                            <li>Specification 4: </li>
-                            <li>Specification 5: </li>
-                            <li>Specification ...: </li>
-                        </ul>
-                    </div>
-                    <div class="right-details">
-                        <h2>100 USD</h2>
-                        <div class="add-item-form">
-                            <select>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <button>ADD TO CART</button>
-                        </div>
-                    </div>                 
-                </div>
-            </div>
-
-            <div class="product-item">
-                <div class="product-image">
-
-                </div>
-                <div class="product-details">
-                    <div class="left-details">
-                        <h3>Title product and something base specifications</h3>
-                        <ul>
-                            <li>Specification 1: </li>
-                            <li>Specification 2: </li>
-                            <li>Specification 3: </li>
-                            <li>Specification 4: </li>
-                            <li>Specification 5: </li>
-                            <li>Specification ...: </li>
-                        </ul>
-                    </div>
-                    <div class="right-details">
-                        <h2>1 000 USD</h2>
-                        <div class="add-item-form">
-                            <select>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <button>ADD TO CART</button>
-                        </div>
-                    </div>                 
-                </div>
-            </div>
-
         </div>
     </div>
 </div> 
+

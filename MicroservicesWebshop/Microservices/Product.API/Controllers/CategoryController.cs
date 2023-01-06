@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson.IO;
 using Product.API.Entities;
 using Product.API.Models;
 using Product.API.Repositories.Category;
@@ -14,7 +15,7 @@ namespace Product.API.Controllers
         private ICategoryRepository _repository;
 
         public CategoryController(ICategoryRepository repository)
-        {
+        { 
             _repository = repository;
         }
 
@@ -85,6 +86,25 @@ namespace Product.API.Controllers
             }
 
             return Ok(category);
+        }
+
+        [HttpGet]
+        [Route("GetFirstCategoryId")]
+        public IActionResult GetFirstCategoryId()
+        {
+            //Check if category is null
+            string categoryId = _repository.GetFirstCategoryId();
+            if (categoryId == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                                    new Response { Status = "Error", Message = "Category does not exist!" });
+            }
+
+            FirstCategory res = new FirstCategory()
+            {
+                FirstCategoryId = categoryId
+            };
+            return Ok(res);
         }
 
         [HttpPut]

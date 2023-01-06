@@ -30,6 +30,12 @@ namespace Product.API.Repositories.Category
             return _categories.Find(category => category.Id == id).FirstOrDefault();
         }
 
+        public string GetFirstCategoryId()
+        {
+            var res = _categories.Find(category => category.Id != null).FirstOrDefault();
+            return res.Id;
+        }
+
         public CategoryEntity GetByName(string name)
         {
             return _categories.Find(category => category.Name == name).FirstOrDefault();

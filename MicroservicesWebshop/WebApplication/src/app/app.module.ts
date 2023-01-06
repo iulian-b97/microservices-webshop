@@ -17,6 +17,7 @@ import { OrderModule } from './_order/order.module';
 import { ProductModule } from './_product/product.module';
 
 import { AuthenticationService } from './_customer/authentication/authentication.service';
+import { ProductService } from './_product/product.service';
 
 
 @NgModule({
@@ -38,7 +39,10 @@ import { AuthenticationService } from './_customer/authentication/authentication
     ProductModule,
     FontAwesomeModule
   ],
-  providers: [AuthenticationService],
+  providers: [
+    AuthenticationService,
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
