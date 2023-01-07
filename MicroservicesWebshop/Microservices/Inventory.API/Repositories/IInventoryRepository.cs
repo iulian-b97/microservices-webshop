@@ -6,6 +6,7 @@ namespace Inventory.API.Repositories
     {
         void CreateBasketShop(BasketShop basketShop);
         void UpdateBasketShop(string userId, SelectedProduct selectedProduct);
+        BasketShop GetBasketShopByUser(string userId);
         void UpdateSelectedProduct(string productCode, SelectedProduct selectedProduct);
         void RemoveSelectedProduct(string productCode);
     }

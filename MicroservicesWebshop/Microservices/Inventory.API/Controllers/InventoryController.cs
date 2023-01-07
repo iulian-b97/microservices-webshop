@@ -47,5 +47,21 @@ namespace Inventory.API.Controllers
             _repository.UpdateBasketShop(userId, selectedProduct);
             return Ok(new Response { Status = "Success", Message = "Basketshop updated successfully!" });
         }
+
+        [HttpGet]
+        [Route("GetBasketShop")]
+        public ActionResult GetBasketShop(string userId)
+        {
+            //Check if user id is null
+            if (userId == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                                    new Response { Status = "Error", Message = "User id is null!" });
+            }
+
+            //Return basketshop
+            var basketShop = _repository.GetBasketShopByUser(userId);
+            return Ok(basketShop);
+        }
     }
 }

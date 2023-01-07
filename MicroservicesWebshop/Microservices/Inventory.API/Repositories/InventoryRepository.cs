@@ -41,6 +41,19 @@ namespace Inventory.API.Repositories
             }       
         }
 
+        public BasketShop GetBasketShopByUser(string userId)
+        {
+            var jsonData = _distributedCache.GetString("InventoryData");
+            var basketShop = JsonConvert.DeserializeObject<BasketShop>(jsonData);
+
+            if (basketShop == null || basketShop.UserId != userId)
+            {
+                return null;
+            }
+
+            return basketShop;
+        }
+
         public void UpdateSelectedProduct(string productCode, SelectedProduct selectedProduct)
         {
             throw new NotImplementedException();
@@ -49,6 +62,6 @@ namespace Inventory.API.Repositories
         public void RemoveSelectedProduct(string productCode)
         {
             throw new NotImplementedException();
-        } 
+        }
     }
 }

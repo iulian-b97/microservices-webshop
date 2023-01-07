@@ -1,22 +1,22 @@
  <div class="container"> 
-    <div class="products-list" >
-        <div class="product-item">
+    <div class="products-list" *ngIf="basketShop">
+        <div class="product-item" *ngFor="let product of basketShop.selectedProducts;">
             <div class="product-image">
 
             </div>
             <div class="product-details">
                 <div class="left-details">
-                    <h3>aaaa</h3>
+                    <h3>{{product.name}}</h3>
                     <ul>
-                        <li><b>Mark:</b> </li>
-                        <li><b>Length:</b>  cm</li>
-                        <li><b>Height:</b>  cm</li>
-                        <li><b>Width:</b> cm</li>
-                        <li><b>Weight:</b>  gr</li>
+                        <li><b>Mark:</b> {{product.mark}}</li>
+                        <li><b>Length:</b>  {{product.length}} cm</li>
+                        <li><b>Height:</b>  {{product.height}} cm</li>
+                        <li><b>Width:</b> {{product.width}} cm</li>
+                        <li><b>Weight:</b>  {{product.Weight}} gr</li>
                     </ul>
                 </div>
                 <div class="right-details">
-                    <h2> USD</h2>
+                    <h2>{{product.price}} USD</h2>
                     <div class="add-item-form">
                         <select>
                             <option value="">1</option>
@@ -35,11 +35,11 @@
         <div class="summary-card">
             <h2>Product summary</h2>
             <div class="prices-box">
-                <label>Products price: <i style="color: red;">7540 USD</i></label>
-                <label>Delivery price: <i style="color: red;">40 USD</i></label>
+                <label>Products price: <i style="color: red;">{{basketShop.summary.productsPrice}} USD</i></label>
+                <label>Delivery price: <i style="color: red;">{{basketShop.summary.shippingPrice}} USD</i></label>
             </div>
             <hr>
-            <h2>Total: 7580 USD</h2>
+            <h2>Total: {{basketShop.summary.totalPrice}} USD</h2>
             <button class="send-btn">SEND</button>
             <hr>
             <h2>Discount code</h2>
