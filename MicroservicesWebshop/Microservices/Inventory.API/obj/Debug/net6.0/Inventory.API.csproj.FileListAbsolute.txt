@@ -25,3 +25,13 @@ C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservice
 C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\obj\Debug\net6.0\Inventory.API.pdb
 C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\obj\Debug\net6.0\Inventory.API.genruntimeconfig.cache
 C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\obj\Debug\net6.0\ref\Inventory.API.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\StackExchange.Redis.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Iulian\Projects\microservices-webshop\MicroservicesWebshop\Microservices\Inventory.API\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
